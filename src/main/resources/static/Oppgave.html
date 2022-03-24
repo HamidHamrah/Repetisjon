@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="C">Celcius</label><input id="C" onchange="celciustilfaranhiet(this.value)">
+    <label for="F">Faranhiet</label><input id="F" onchange="faranhiettilCcelcius(this.value)">
+
+    <script type="application/javascript">
+        function faranhiettilCcelcius(F){
+            let C=(5/9)*(parseFloat(F)-32);
+            let output=document.getElementById("C");
+            output.value=C;
+        }
+        function celciustilfaranhiet(C){
+            let F=(9/5)*(parseFloat(C)+32)
+            let output=document.getElementById("F")
+            output.value=F;
+        }
+    </script>
+</body>
+</html>

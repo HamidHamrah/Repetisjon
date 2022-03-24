@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <label for="tall1">Første nummer</label><input id="tall1">
+  <label for="tall2">Andre nummer</label><input id="tall2">
+  <div id="output"></div>
+  <button type="button" class="btn btn-primary" onclick="pluss()">+</button>
+  <button type="button" class="btn btn-primary" onclick="minus()">-</button>
+  <button type="button" class="btn btn-primary" onclick="gange()">*</button>
+  <button type="button" class="btn btn-primary" onclick="dele()">/</button>
+<script>
+    function pluss(){
+        let tall1=Number(document.getElementById("tall1").value)
+        let tall2=Number(document.getElementById("tall2").value);
+        let output=document.getElementById("output")
+        if (isNaN(tall1) || isNaN(tall2)){
+            alert("Input feltene må være fylt med tall")
+        }
+        else{
+            let sum=tall1+tall2;
+            output.innerHTML=sum;
+        }
+    }
+    function minus(){
+        let tall1=Number(document.getElementById("tall1").value)
+        let tall2=Number(document.getElementById("tall2").value);
+        let output=document.getElementById("output")
+        if (isNaN(tall1) || isNaN(tall2)){
+            alert("Input feltene må være fylt med tall")
+        }
+        else{
+            let differanse=tall1-tall2;
+            output.innerHTML=differanse;
+        }
+    }
+    function dele(){
+        let tall1=Number(document.getElementById("tall1").value)
+        let tall2=Number(document.getElementById("tall2").value);
+        let output=document.getElementById("output")
+        if (isNaN(tall1) || isNaN(tall2)){
+            alert("Input feltene må være fylt med tall")
+        }
+        else{
+            let result=tall1/tall2;
+            output.innerHTML=result;
+        }
+    }
+    function gange(){
+        let tall1=Number(document.getElementById("tall1").value)
+        let tall2=Number(document.getElementById("tall2").value);
+        let output=document.getElementById("output")
+        if (isNaN(tall1) || isNaN(tall2)){
+            alert("Input feltene må være fylt med tall")
+        }
+        else{
+            let produkt=tall1*tall2;
+            output.innerHTML=produkt;
+        }
+    }
+</script>
+</body>
+</html>
