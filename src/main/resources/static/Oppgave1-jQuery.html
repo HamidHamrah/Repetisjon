@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <input type="text" class="form-control" placeholder="First name" id="navn">
+            </div>
+            <div class="form-group col-md-2">
+                <input type="text" class="form-control" placeholder="Alder" id="alder">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="print()">Click here</button>
+    </form>
+    <div id="output"></div>
+    <script type="application/javascript">
+        function print(){
+            console.log("Hei, start");
+            let fornavn=$("#navn").val();
+            let alderString=$("#alder").val();
+            let alder=Number(alderString);
+            let output=$("#output");
+            if (isNaN(alder) || alder<1){
+                alert("Alder må være et tall støre enn 1")
+            }
+            else{
+              output.html(fornavn+" er "+alder);
+            }
+        }
+    </script>
+</body>
+</html>
